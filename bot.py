@@ -8,6 +8,8 @@ from ml_model import MLModel
 from risk_manager import RiskManager
 from state_manager import StateManager
 
+print("Starting bot run...")
+
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s %(levelname)s %(message)s',
                     handlers=[
