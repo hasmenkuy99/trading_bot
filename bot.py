@@ -1,5 +1,5 @@
 # bot.py
-import json, logging
+import json, logging, os, sys
 from binance import Client
 from strategies.candlestick import get_candle_signal
 from strategies.rsi import get_rsi_signal
@@ -8,8 +8,12 @@ from ml_model import MLModel
 from risk_manager import RiskManager
 from state_manager import StateManager
 
-logging.basicConfig(filename='bot.log', level=logging.INFO,
-                    format='%(asctime)s %(levelname)s %(message)s')
+logging.basicConfig(level=logging.INFO,
+                    format='%(asctime)s %(levelname)s %(message)s',
+                    handlers=[
+                        logging.FileHandler("bot.log"),
+                        logging.StreamHandler(sys.stdout)
+                    ])
 
 state = StateManager.load("state.json")
 balance = state.data.get("balance", 10000)
