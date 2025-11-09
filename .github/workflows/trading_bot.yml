@@ -1,4 +1,3 @@
-# .github/workflows/trading_bot.yml
 name: Crypto Trading Bot
 
 on:
@@ -32,7 +31,8 @@ jobs:
           BINANCE_API_KEY: ${{ secrets.BINANCE_API_KEY }}
           BINANCE_API_SECRET: ${{ secrets.BINANCE_API_SECRET }}
         run: |
-          python bot.py || echo "Bot run failed"
+          echo "Starting trading bot from workflow..."
+          python bot.py || (echo "Bot failed. Outputting bot.log:" && cat bot.log)
 
       - name: Commit updated state and logs
         uses: stefanzweifel/git-auto-commit-action@v4
