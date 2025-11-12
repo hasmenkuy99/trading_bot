@@ -1,0 +1,4 @@
+2025-11-12 23:19:30,570 INFO Signals: candlestick=-1, RSI=0, trend=0
+2025-11-12 23:19:30,571 INFO ML model predicts: 1
+2025-11-12 23:19:30,571 INFO No trade signal this run.
+2025-11-12 23:19:30,571 INFO State saved.
