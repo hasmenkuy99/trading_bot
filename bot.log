@@ -22,3 +22,7 @@
 2026-09-20 14:31:13,740 INFO ML model predicts: 1
 2026-09-20 14:31:13,740 INFO No trade signal this run.
 2026-09-20 14:31:13,741 INFO State saved.
+2026-10-03 23:32:01,634 INFO Signals: candlestick=-1, RSI=0, trend=0
+2026-10-03 23:32:01,636 INFO ML model predicts: 1
+2026-10-03 23:32:01,636 INFO No trade signal this run.
+2026-10-03 23:32:01,636 INFO State saved.
